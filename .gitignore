@@ -1,0 +1,9 @@
+*.egg-info
+*.pyc
+.git
+.mds
+.pyc
+.ropeproject
+dist
+env
+fabfile.*
