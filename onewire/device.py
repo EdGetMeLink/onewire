@@ -1,6 +1,5 @@
 from os.path import join, split
 import glob
-from onewire.config import load_cfg
 import logging
 LOG = logging.getLogger(__name__)
 
@@ -67,6 +66,7 @@ class Onewire(object):
             if device.device_id == id:
                 return device
         return None
+
 
 class Device(object):
     '''
