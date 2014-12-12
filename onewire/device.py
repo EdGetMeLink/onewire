@@ -1,5 +1,5 @@
 from os.path import join, split
-import glob
+from glob import glob
 import logging
 LOG = logging.getLogger(__name__)
 
@@ -31,7 +31,7 @@ class Onewire(object):
         else:
             if not self.base_dir:
                 raise ValueError('base path name not set.')
-        for device_path in glob.glob(join(self.base_dir, '*')):
+        for device_path in glob(join(self.base_dir, '*')):
             try:
                 _device_type, _device_id = spliter(device_path)
                 _device_file = join(device_path, 'w1_slave')
