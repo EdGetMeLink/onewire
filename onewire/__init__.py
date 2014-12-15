@@ -1,1 +1,3 @@
-__version__ = '1.0.0'
+from pkg_resources import resource_string
+
+__version__ = resource_string('onewire', 'version.txt').strip().decode('ascii')

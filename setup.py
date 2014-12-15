@@ -2,9 +2,9 @@ from setuptools import setup, find_packages
 from os.path import join, dirname
 PACKAGE = 'onewire'
 
-PACKAGE = 'onewire'
 with open(join(PACKAGE, 'version.txt')) as fptr:
     VERSION = fptr.read().strip()
+
 setup(
     author='Mike Deltgen',
     author_email='mike@deltgen.net',
@@ -16,8 +16,7 @@ setup(
     include_package_data=True,
     license="Private",
     install_requires=[
-        'config-resolver',
+        'config-resolver >= 4.2.2, <5.0',
     ],
     packages=find_packages(exclude=["tests.*", "tests"]),
-    zip_safe=False,
 )
